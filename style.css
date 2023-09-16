@@ -29,7 +29,7 @@
   }
   
   @media screen and (max-width: 393px) {
-    .navBar a:not(first-child) {
+    .navBar a:not(first-child) {/* from start child anchor tag close all the tag*/
       display: none;
     }
     .navBar a.icon {
@@ -87,18 +87,21 @@
   }
   .boxes{
     flex:1;
-    min-width: calc(33.33% - 10px);
+   /*it occupy the 33.33% then occupy the remaining will adjust till 10px*/
     border-radius: 15px;
     margin: 5px;
   }
   .box1 {
+    min-width: calc(33.33% - 10px);
     border-radius: 15px;
     background: linear-gradient(135.38deg, #3300FF 0%, #FA00FF 98.32%);
   }
 .box2{
+    min-width: calc(33.33% - 10px);
     border-radius: 15px;
 }
 .box3{
+    min-width: calc(33.33% - 10px);
     background-color: #d9d9d9;
     border-radius: 15px;
     display: flex;
@@ -109,7 +112,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);/* the 3 column of same 1 fr*/
     grid-gap:10px;
-    height: 80%;
+     height: 80%;/*height is 80% of box 3 height  */
     width: 80%;
 }
 .box3_{
@@ -126,4 +129,16 @@
     height: 100%;
     display: block;
     margin: 0 auto;
+}
+@media screen and (max-width:744px){
+    .logo{
+        display: block;
+    }
+    .box1{
+        min-width: 100%;
+        height: 385px;
+    }
+    .box2,.box3{
+        min-width: calc(50%-10px);
+    }
 }
