@@ -80,6 +80,7 @@
     width: 100%;
     margin-top: 60px;
     margin-right: auto;
+    margin-left: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -141,4 +142,31 @@
     .box2,.box3{
         min-width: calc(50%-10px);
     }
+}
+@media screen and (max-width:393px) {
+    .logo,.box3,.box1{
+        min-width: 250px;
+        height:250px;
+        transform: scaleX(-1);/*for mirror image like it transform vertical and horizontal*/
+        filter: FlipH;
+        transform: scaleY(-1);
+        filter: FlipV;
+        margin-bottom: 10px;
+    }
+    .logo{
+    display: block;
+    }
+    .mainbox{
+        display: block;
+        max-width: 250px;
+        transform: scaleX(-1);
+        filter: FlipH;
+        transform: scaleY(-1);
+        filter: FlipV;
+        margin-top: 10px
+    } 
+    .navBar{
+        min-height: 55px;
+        height: auto;
+    } 
 }

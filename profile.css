@@ -1,0 +1,75 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d88181;
+            background: linear-gradient(-45deg,#ee7752 ,#e73c7e,#23a6d5,#23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        }
+
+        .container {
+            
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px;
+            background-color: rgb(247, 242, 242);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .user-info {
+            text-align: center;
+        }
+
+        .username {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        @keyframes gradient{
+            0%{
+                background-position: 0% 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0% 50%;
+            }
+        }
+        .registration-number {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .instagram-handle {
+            font-size: 18px;
+            animation: fadeInUp 1s ease-in-out 0.4s;
+        }
+        .profile-photo:hover {
+            transform: scale(1.1); /* Enlarge the photo on hover */
+        }
+        .instagram-handle a:hover {
+            text-decoration: underline;
+        }
+        .container:hover .user-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+    
